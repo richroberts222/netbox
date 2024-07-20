@@ -5,12 +5,12 @@ class DashboardPage
     constructor(page)
     {
         this.page = page;
-        this.searchBox = page.locator('input[name="q"]');
+        this.searchBox = page.locator('input[name="q"]').first();
     }
     
     async validateDashboardPageLoaded()
     {
-        await expect(this.searchBox).
+        await expect(this.searchBox).toBeEditable();
         
     }
 }
