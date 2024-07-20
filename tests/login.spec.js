@@ -1,18 +1,16 @@
-const {test, expect} = require('@playwright/test');
+const {test, expect} = require('@playwright/test')
+const { POManager } = require('../pageobjects/POManager');
 
 test.only("Netbox Login", async ({page}) => {
 
     const USERNAME = "bitshredr";
     const PASSWORD = "!T0mmygun***";
 
-    const username = page.locator('#id_username');
-    const password = page.locator('#id_password');
-    const signIn = page.locator('button[type="submit"]');
+    const poManager = new POManager(page);
+    const loginPage = poManager.getLoginPage();
 
     await page.goto("http://127.0.0.1:8000");
-    await username.fill(USERNAME);
-    await password.fill(PASSWORD);
-    await signIn.click();
+    await loginPage.validLogin(USERNAME, PASSWORD);
 
     await page.pause();
 });
