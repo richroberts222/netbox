@@ -1,5 +1,6 @@
 PreRequsite:
 1. Install Netbox with it running on localhost:8000
+Install Instructions here: https://netboxlabs.com/docs/netbox/en/stable/installation/
 
 Once this repo is cloned
 
