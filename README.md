@@ -56,7 +56,7 @@ NOTE: cucumber-js lives inside of node_modules/.bin/cucumber-js. This file will 
 2. Return Control to the Terminal after Execution: 
     npx cucumber-js --exit
 3. Run an Individual Feature File
-    npx cucumber-js feature/myFeature.feature --exit
+    npx cucumber-js features/myFeature.feature --exit
 4. Control Test Execution for example Smoke and Regression
 NOTE: Set annotations on top of any Scenario of Scenario Outline within Feature Files
     npx cucumber-js --tags "@Regression" --exit

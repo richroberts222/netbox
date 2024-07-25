@@ -25,5 +25,10 @@ class DashboardPage
     {
         await expect(this.searchBox).toBeEditable();
     }
+
+    async validateDashboardPageUrl(pageUrl)
+    {
+        await expect(this.page).toHaveURL(pageUrl);
+    }
 }
 module.exports = {DashboardPage}
